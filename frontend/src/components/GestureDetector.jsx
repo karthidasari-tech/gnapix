@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const GestureDetector = ({ onVerification }) => {
-  const [verified] = useState(true);
-
   return (
     <div className="gesture-detector">
       <h2>📸 Verification Complete</h2>
@@ -12,13 +10,7 @@ const GestureDetector = ({ onVerification }) => {
         <p>📊 Confidence: 85%</p>
       </div>
       <button
-        onClick={() => {
-          onVerification({
-            verified: true,
-            confidence: 0.85,
-            timestamp: new Date()
-          });
-        }}
+        onClick={() => onVerification({ verified: true, confidence: 0.85, timestamp: new Date() })}
         className="verify-btn"
       >
         ✓ Verify & Mark Complete
