@@ -1,6 +1,14 @@
 import React from 'react';
 
 const GestureDetector = ({ onVerification }) => {
+  const handleClick = () => {
+    onVerification({
+      verified: true,
+      confidence: 0.85,
+      timestamp: new Date()
+    });
+  };
+
   return (
     <div className="gesture-detector">
       <h2>📸 Verification Complete</h2>
@@ -9,10 +17,7 @@ const GestureDetector = ({ onVerification }) => {
         <p>💊 Tablet Detected: ✓</p>
         <p>📊 Confidence: 85%</p>
       </div>
-      <button
-        onClick={() => onVerification({ verified: true, confidence: 0.85, timestamp: new Date() })}
-        className="verify-btn"
-      >
+      <button onClick={handleClick} className="verify-btn">
         ✓ Verify & Mark Complete
       </button>
     </div>
