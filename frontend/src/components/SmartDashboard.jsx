@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import GestureDetector from './GestureDetector';
 
-const API_BASE ='https://gnapix.onrender.com/';
+const API_BASE ='https://gnapix.onrender.com';
 const USER_ID = 'user_' + Math.random().toString(36).substr(2, 9);
 
 const SmartDashboard = () => {
