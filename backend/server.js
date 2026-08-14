@@ -4,7 +4,13 @@ const { v4: uuidv4 } = require('uuid');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://gnapix-cfntnsvo2-gnapix.vercel.app',
+    'https://gnapix-ixp8-1dy9le86a-gnapix.vercel.app'
+  ]
+}));
 app.use(express.json());
 
 // Database (in-memory)
