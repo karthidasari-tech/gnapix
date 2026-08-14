@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import GestureDetector from './GestureDetector';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://your-render-backend-url.onrender.com/api';
 const USER_ID = 'user_' + Math.random().toString(36).substr(2, 9);
 
 const SmartDashboard = () => {
